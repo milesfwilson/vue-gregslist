@@ -43,8 +43,8 @@ class HousesService {
   async createHouse(newHouse) {
     try {
       console.log(newHouse)
-      return await api.post('/houses', newHouse)
-      // router.push({ name: 'ActiveHouse', params: { houseId: res.data.data._id } })
+      const res = await api.post('/houses', newHouse)
+      router.push({ name: 'ActiveHouse', params: { houseId: res.data.data._id } })
     } catch (error) {
       console.error(error)
     }

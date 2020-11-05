@@ -40,8 +40,8 @@
             <input type="number"
                    class="form-control my-1"
                    aria-describedby="helpId"
-                   placeholder="Floors"
-                   v-model="state.newHouse.floors"
+                   placeholder="Levels"
+                   v-model="state.newHouse.levels"
             >
           </div>
           <div class="col-6">
@@ -101,7 +101,9 @@ export default {
   components: { HouseComponent },
   setup() {
     const state = reactive({
-      newHouse: {}
+      newHouse: {
+
+      }
     })
     onMounted(() => {
       housesService.getAllHouses()
