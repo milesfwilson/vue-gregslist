@@ -1,23 +1,23 @@
 <template>
-  <div class="car-component col-3 card">
-    <h3>
-      {{ carProp.make }} {{ carProp.model }}
-    </h3>
-    <router-link :to="{name: 'ActiveCar' , params: {carId: carProp._id}}">
-      <img :src="
-             carProp.imgUrl"
-           alt="car Img"
-           class="img-fluid"
-      >
-    </router-link>
+  <div class="car-component col-4">
+    <div class="card shadow-lg m-2 p-2">
+      <h3>
+        {{ carProp.year }} {{ carProp.make }} {{ carProp.model }}
+      </h3>
+      <router-link :to="{name: 'ActiveCar' , params: {carId: carProp._id}}">
+        <img :src="
+               carProp.imgUrl"
+             alt="car Img"
+             class="img-fluid"
+        >
+      </router-link>
 
     <!-- <img :src="carProp.imgUrl"
          alt="car Img"
          class="img-fluid"
          @click="setActiveCar"
     > -->
-
-    {{ carProp }}
+    </div>
   </div>
 </template>
 
